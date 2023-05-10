@@ -130,7 +130,6 @@ class RecipeCard extends HTMLElement {
     //           cardTemplate.html and the data passed in (You should only have one <article>,
     //           do not nest an <article> inside another <article>). You should use Template
     //           literals (tempalte strings) and element.innerHTML for this.
-    let ratingImg = "./assets/images/icons/" + `${data["rating"]}` + "-star.svg";
 
     articleOBJ.innerHTML = `
     <img src= "${data["imgSrc"]}"
@@ -141,7 +140,7 @@ class RecipeCard extends HTMLElement {
     <p class="organization">${data["organization"]}</p>
     <div class="rating">
       <span>${data["rating"]}</span>
-      <img src="${ratingImg}" alt="${data["rating"]}">
+      <img src=${"./assets/images/icons/" + `${data["rating"]}` + "-star.svg"} alt="${data["rating"]}">
       <span>${data["numRatings"]}</span>
     </div>
     <time>${data["lengthTime"]}</time>
